@@ -1,0 +1,1 @@
+#### Bash Scripts para manipulação de Vídeos e Fotos
