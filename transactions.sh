@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# ffmpeg -loop 1 -t 5 -i 1.jpg -loop 1 -t 5 -i 2.jpg -loop 1 -t 5 -i 3.jpg -i music.mp3 -filter_complex "[0:v]scale=3840:2160:force_original_aspect_ratio=decrease,pad=3840:2160:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=out:st=4:d=1[v0]; [1:v]scale=3840:2160:force_original_aspect_ratio=decrease,pad=3840:2160:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v1]; [2:v]scale=3840:2160:force_original_aspect_ratio=decrease,pad=3840:2160:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v2]; [v0][v1][v2] concat=n=3:v=1:a=0,format=yuv420p[v]" -map "[v]" -map 3:a -shortest video.mp4
+
+ffmpeg -loop 1 -t 4 -i 1.jpg -loop 1 -t 4 -i 2.jpg -loop 1 -t 4 -i 3.jpg -i music.mp3 -filter_complex "[0:v]scale=3840:2160:force_original_aspect_ratio=decrease,pad=3840:2160:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=out:st=4:d=1[v0]; [1:v]scale=3840:2160:force_original_aspect_ratio=decrease,pad=3840:2160:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v1]; [2:v]scale=3840:2160:force_original_aspect_ratio=decrease,pad=3840:2160:(ow-iw)/2:(oh-ih)/2,setsar=1,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v2]; [v0][v1][v2] concat=n=3:v=1:a=0,format=yuv420p[v]" -map "[v]" -map 3:a -shortest video.mp4
+
