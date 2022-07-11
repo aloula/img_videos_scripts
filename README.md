@@ -5,6 +5,9 @@
 
 https://imagemagick.org/index.php
 
+```
+sudo apt install imagemagick
+```
 
 #### Instalação
 
