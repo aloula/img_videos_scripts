@@ -14,3 +14,11 @@ sudo apt install imagemagick
 ```
 $ sudo cp *.sh *.png /usr/local/bin/
 ```
+
+#### Uso
+```
+$ merge_movie.sh
+```
+```
+$ merge_photo.sh
+```
